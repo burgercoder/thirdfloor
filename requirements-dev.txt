@@ -1,2 +1,3 @@
 # development only requirements
 mypy-lang
+pylint
