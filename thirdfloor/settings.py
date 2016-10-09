@@ -24,6 +24,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'thirdfloor.account',
+    'thirdfloor.base',
+    'thirdfloor.core',
 ]
 
 ROOT_URLCONF = 'thirdfloor.urls'
