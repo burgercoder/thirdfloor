@@ -67,3 +67,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'account.User'
+
+TEST_RUNNER = 'thirdfloor.base.tests.TestRunner'
