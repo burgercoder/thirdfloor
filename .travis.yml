@@ -6,6 +6,6 @@ install:
   - pip install --upgrade -r requirements.txt
   - pip install --upgrade -r requirements-dev.txt
 script:
-  - mypy --strict-optional --disallow-untyped-defs --disallow-untyped-calls thirdfloor
+  - mypy --strict-optional --disallow-untyped-defs --disallow-untyped-calls --silent-imports thirdfloor
   - pylint thirdfloor
   - python manage.py test
