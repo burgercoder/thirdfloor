@@ -14,6 +14,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'thirdfloor.account',
+    'thirdfloor.base',
+    'thirdfloor.core',
 ]
 
 MIDDLEWARE = [
@@ -24,10 +28,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'thirdfloor.account',
-    'thirdfloor.base',
-    'thirdfloor.core',
 ]
 
 ROOT_URLCONF = 'thirdfloor.urls'
@@ -65,3 +65,5 @@ TIME_ZONE = 'UTC'
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'account.User'
