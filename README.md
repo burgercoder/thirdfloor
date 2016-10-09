@@ -1,6 +1,8 @@
 Third Floor
 ============
 
+[![Build Status](https://travis-ci.org/burgercoder/thirdfloor.svg?branch=master)](https://travis-ci.org/burgercoder/thirdfloor)
+
 Third Floor is the next generation doujinshi reader built with Django and Angular 2.
 
 Name
