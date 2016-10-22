@@ -8,6 +8,7 @@ from django.core.management import call_command
 from django.db.backends.base.base import BaseDatabaseWrapper
 from django.test.runner import DiscoverRunner
 from django.test.testcases import TestCase
+from django.urls.base import reverse
 
 
 class TestRunner(DiscoverRunner):
@@ -34,3 +35,11 @@ class BaseTestCase(TestCase):
                 '{} is slower than {}ms: {}ms'.format(self._testMethodName, self.TEST_WARN_MS, duration),
                 RuntimeWarning)
         super().tearDown()
+
+
+class IndexViewTest(BaseTestCase):
+
+    def test_get(self) -> None:
+        response = self.client.get(reverse('index'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
